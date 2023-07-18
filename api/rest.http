@@ -1,0 +1,31 @@
+### get all users
+GET http://localhost:8000/users
+
+###Post user
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "firstName":"Jhaggu",
+    "lastName":"Dhital",
+    "email":"pradeep@gmail.com",
+    "phone":"04628362",
+    "dob":"3/02/2323"
+}
+
+### Update user
+PUT http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "firstName":"Shiwa",
+    "lastName":"Dhital",
+    "email":"pradeep@gmail.com",
+    "phone":"5873454793",
+    "dob":"3/02/23",
+    "_id":"64b6692aa5199427b1aacfc2"
+}
+
+
+### delete user
+Delete http://localhost:8000/users/64b666a40280250e498feb78
