@@ -12,4 +12,4 @@ Run the application :: npm run dev
 # Note: There are few environment variables defined
 env in frontend :: REACT_APP_API_ENDPOINT
 <br>
-env in backend :: PORT, MONGO_CLIENT
+env in backend :: PORT & MONGO_CLIENT
