@@ -10,7 +10,11 @@ dbConnection();
 app.use(express.json());
 app.use(cors());
 app.use("/users", userRouter);
-
+app.get("/", (req, res) => {
+  res.json({
+    message: "Hi there, you got lost.",
+  });
+});
 app.use((error, req, res, next) => {
   console.log(error);
   const statusCode = error.status || 404;
@@ -19,18 +23,7 @@ app.use((error, req, res, next) => {
     message: error.message,
   });
 });
-// app.use("/", (req, res, next) => {
-//   try {
-//     res.json({
-//       status: "success",
-//       message: "You hit the server root",
-//     });
-//   } catch (error) {
-//     next(error);
-//   }
 
-//   next(error);
-// });
 app.listen(PORT, (error) => {
   error
     ? console.log(error)
